@@ -1,0 +1,5 @@
+fragment RepositoryItem on Repository {
+    id
+    name
+    description
+}

@@ -1,0 +1,15 @@
+fragment RepositoryOwnerItem on RepositoryOwner {
+    ... on User {
+        userEmail : email
+        id
+        name
+        #       We can use skip or include directive in Apollo Kotlin
+        bio @include(if: $showBio)
+    }
+
+    ... on Organization {
+        organizationEmail : email
+        id
+        name
+    }
+}

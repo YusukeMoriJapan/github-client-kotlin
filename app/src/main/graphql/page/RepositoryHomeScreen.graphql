@@ -1,0 +1,8 @@
+query RepositoryHomeScreen($owner: String!, $name: String!, $showBio: Boolean!) {
+    repository(owner: $owner, name: $name) {
+        ...RepositoryItem
+        owner {
+            ...RepositoryOwnerItem
+        }
+    }
+}

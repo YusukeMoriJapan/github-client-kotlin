@@ -1,0 +1,11 @@
+mutation UpdateRepositoryDesc(
+    $repositoryId: ID!
+    $description: String!
+) {
+    updateRepository(input: {repositoryId: $repositoryId, description: $description}) {
+        repository {
+            id
+            description
+        }
+    }
+}
